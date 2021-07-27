@@ -1,0 +1,62 @@
+body header .nav {
+    background-color: #fff;
+    height: 100px;
+  }
+  
+  body header .nav .nav-link {
+    color: #0A3D62;
+    font-size: 30px;
+    font-family: "Gilbert Color Bold";
+    padding-top: 20px;
+  }
+  
+  body section {
+    margin: 100px 0px;
+  }
+  
+  body section .main-img {
+    border: 3px solid #0A3D62;
+    border-radius: 180px;
+    background-color: #0A3D62;
+    height: 320px;
+  }
+  
+  body section .main-img .img-main {
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  body section .main-img .img-txt {
+    color: #fff;
+    font-family: "Gilbert Color Bold";
+    font-size: 30px;
+    padding-top: 50px;
+    font-weight: bold;
+  }
+  
+  body section .main-img .intro-txt {
+    color: #fff;
+    font-family: "Open Sans";
+    font-size: 15px;
+  }
+  
+  body section .photography .main-photography {
+    color: #0A3D62;
+    font-family: "Gilbert Color Bold";
+    font-size: 30px;
+    padding: 200px 0px 50px 0px;
+    font-weight: bold;
+  }
+  
+  body section .photography .photos {
+    background-color: #ffe785;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  body section .photography .photos img {
+    margin: 10px;
+    max-width: 250px;
+  }
+  /*# sourceMappingURL=style.css.map */
