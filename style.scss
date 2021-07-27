@@ -2,7 +2,8 @@ $color:(
     primary: #0A3D62,
     secondary: #badc57,
     accent: #fff,
-    yell: #ffe785
+    yell: #ffe785,
+    black: rgb(0, 0, 0)
 );
 
 @function color($colorName){
@@ -10,8 +11,9 @@ $color:(
 }
 
 $fonts:(
-    main: 'Gilbert Color Bold' ,
-    secondary:  'Open Sans',
+    main: 'Zen Tokyo Zoo',
+    secondary:  'Philosopher',
+    coder: 'Cutive Mono'
 );
 @function fonts($fontName){
     @return map-get($map: $fonts, $key: $fontName );
@@ -21,75 +23,58 @@ $fonts:(
 
 
 body{
+    background-color: color(black);
+    color: color(accent);
+    .right-con{
+        background-color: #fff;
+        height: 100%;
+    }
+    .hero{
+        font-family:fonts(main);
+        color: #fff;
+    }
+    .zero1{
+        margin-top: 100px;
+        font-family: fonts(secondary);
+        font-size: 80px;
+        
+    }
+    .zero{
+        font-family: fonts(coder);
+        color: rgb(9, 202, 9);
+        font-size: 40px;
+        margin-top: -30px;
+        font-stretch: expanded;
+    }
+    .intro{
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Montserrat';
+        padding: 20px;
+        border-style: solid;
+        border-color: rgb(219, 219, 219);
+        border-width: 2px;
+        margin-top: 30px;
+        margin-left: 30px;
+        margin-right: 30px;
 
-    // header is here
+    }
+    .b-clutter{
+        margin-top: 40px;
+    }
+    .btn{
+        background-color: rgb(0, 0, 0);
+        margin: 20px;
+        color: #ebfffc ;
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(71, 71, 71);
+        font-family: fonts(secondary);
+    }
+    .btn-act:hover{
+        color: #f8fbff;
+        background-color: rgb(71, 71, 71);
 
-    header{
-        .left-con{
-            background-color: color(accent);
-            height: 100px;
-            .nav-link{
-                color: color(primary);
-                font-size: 30px;
-                font-family: fonts(main);
-                padding-top: 20px ;
-
-            }
-        }
     }
 
-
-// section starts here
-    section{
-        margin: 100px 0px;
-        .main-img{
-            border: 3px solid color(primary);
-            border-radius: 180px;
-            background-color:color(primary);
-            height: 320px;
-            .img-main{
-                height: auto;
-                border-radius: 50%;
-                
-            }
-            .img-txt{
-                color: color(accent);
-                font-family: fonts(main);
-                font-size: 30px;
-                padding-top: 50px;
-                font-weight: bold;
-                
-            }
-            .intro-txt{
-                color: color(accent);
-                font-family: fonts(secondary);
-                font-size: 15px;
-                
-            }
-        }
-
-        .photography{
-            
-            .main-photography{
-                color: color(primary);
-                font-family: fonts(main);
-                font-size: 30px;
-                padding: 200px 0px 50px 0px;
-                font-weight: bold;
-            }
-            .photos{
-                background-color: color(yell);
-                
-                align-items: center;
-
-                img{
-                    margin: 10px;
-                    max-width: 250px;
-                }
-            }
-        }
-    }
 }
-
-
-
