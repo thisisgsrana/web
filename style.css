@@ -1,11 +1,23 @@
 body {
   background-color: black;
   color: #fff;
+  height: 100%;
 }
 
 body .right-con {
-  background-color: #fff;
+  background-color: black;
   height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body .hero {
@@ -57,5 +69,48 @@ body .btn {
 body .btn-act:hover {
   color: #f8fbff;
   background-color: #474747;
+}
+
+body .links {
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+}
+
+body .right-con-sm {
+  max-height: 30%;
+}
+
+body .hero-sm {
+  margin-top: 100px;
+  font-family: "Zen Tokyo Zoo";
+  color: #fff;
+}
+
+body .zero1-sm {
+  margin-top: 50px;
+  font-family: "Philosopher";
+  font-size: 80px;
+}
+
+body .zero-sm {
+  font-family: "Cutive Mono";
+  color: #09ca09;
+  font-size: 40px;
+  margin-top: -30px;
+  font-stretch: expanded;
+}
+
+body .main-img {
+  min-width: 500%;
+}
+
+body .b-clutter-a {
+  position: relative;
+  float: bottom;
+  margin: 100px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 /*# sourceMappingURL=style.css.map */
