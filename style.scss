@@ -11,7 +11,7 @@ $color:(
 }
 
 $fonts:(
-    main: 'Zen Tokyo Zoo',
+    main: 'Lora',
     secondary:  'Philosopher',
     coder: 'Cutive Mono'
 );
@@ -107,9 +107,7 @@ body{
         margin-top: -30px;
         font-stretch: expanded;
     }
-    .main-img{
-        min-width: 500%;
-    }
+   
     .b-clutter-a{
         position: relative;
         float: bottom;

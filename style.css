@@ -21,7 +21,7 @@ body .right-con {
 }
 
 body .hero {
-  font-family: "Zen Tokyo Zoo";
+  font-family: "Lora";
   color: #fff;
 }
 
@@ -83,7 +83,7 @@ body .right-con-sm {
 
 body .hero-sm {
   margin-top: 100px;
-  font-family: "Zen Tokyo Zoo";
+  font-family: "Lora";
   color: #fff;
 }
 
@@ -99,10 +99,6 @@ body .zero-sm {
   font-size: 40px;
   margin-top: -30px;
   font-stretch: expanded;
-}
-
-body .main-img {
-  min-width: 500%;
 }
 
 body .b-clutter-a {
