@@ -145,6 +145,7 @@ body .section .vid-tittle {
 
 body .container-1 {
   margin: 30px;
+  height: 200px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(15px, 1fr))[auto-fill];
@@ -154,7 +155,7 @@ body .container-1 {
 }
 
 body .container-1 .article {
+  margin-bottom: 0%;
   background-color: #6d6d6d;
-  color: white;
 }
 /*# sourceMappingURL=style.css.map */

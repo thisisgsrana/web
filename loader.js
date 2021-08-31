@@ -15,7 +15,15 @@ const barColors = ["rgb(255, 255, 255)",
                 "rgb(255, 44, 223)",
                 "rgb(255, 44, 107)",
                 "rgb(225, 0, 255)"];
-
+const audio = ['jff-1.mp3',
+                "01.mp3",
+                "02.mp3",
+                "03.mp3",
+                "04.mp3",
+                "05.mp3"]
+var randomNumber = function(min, max){
+    return Math.random() * (max - min) + min;
+}
 
 
 for (let i = 0; i < 50; i++) {
@@ -28,14 +36,24 @@ for (let i = 0; i < 50; i++) {
 
 function changeColor(){
 
-document.querySelectorAll('.article').forEach(item  => {
+    document.querySelectorAll('.article').forEach(item  => {
         item.addEventListener('mouseenter', function (event){
+            var rand =  randomNumber(-200, -100);
             var randomColor = Math.floor(Math.random()*barColors.length);
-            event.target.style.background = barColors[randomColor];
+            
 
+            event.target.style.background = barColors[randomColor];
+            event.target.style.height = randomNumber(200, 400);
+            event.target.style.marginTop = `${rand}px`;
+        
+
+        
             setTimeout(function() {
                 event.target.style.background = "";
-              }, 2000);
+                event.target.style.height = "";
+                event.target.style.marginTop = "";
+                
+              }, 500);
 
             
         }, false);
@@ -45,11 +63,24 @@ document.querySelectorAll('.article').forEach(item  => {
 };
 
 
+function playAudio(){
+    document.querySelectorAll(".article").forEach(item =>{
+        for(i =1; i<audio.length; i++){
+            var radio = new Audio(audio[i]);
+            
+        }
+        item.addEventListener("click",()=>{
+            
+        return radio.paused ? radio.play() : radio.pause();
+        });
+        
+
+    });
+     
+};
+
 changeColor();
-
-
-
-
+playAudio();
 
 
 
