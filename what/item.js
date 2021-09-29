@@ -32,7 +32,7 @@ const products = [
         flavour1: "",
         flavour2: "",
         milkPowder: 0,
-        salt: 225,
+        salt: 275,
         gheeSlab: 850,
     },
     {
@@ -90,7 +90,7 @@ var select = document.querySelector("#productSelect");
 select.addEventListener("change", (event) =>{
     
     const quantity = document.querySelector(".quantity");
-    
+    const p = document.createElement("p");
     const input = document.createElement("input");
     input.classList.add("fQuantity");
     input.type = "number";
@@ -103,14 +103,17 @@ select.addEventListener("change", (event) =>{
     
     input.style.width = "300px";
     quantity.appendChild(input);
-    input.addEventListener("change", (event)=>{
+
+    input.addEventListener("input", (event)=>{
+        p.innerHTML = ""; 
         var qt = input.value;
         var recepie = make(getNum, qt);
         console.log(recepie);
+        p.classList.add(`Recepie`);
 
-        const p = document.createElement("p");
         p.innerHTML = recepie;
         quantity.appendChild(p);
+           
     });
    
 
@@ -119,20 +122,51 @@ select.addEventListener("change", (event) =>{
 
 function make(index, qt){
     if(index == 0){
-        console.log("You bitch, Select Something");
-    }else if(index == 1){
-        var refiendWheatFlour = products[1].refiendWheatFlour*qt/products[1].forRCP;
-        var sugar = products[1].sugar*qt/products[1].forRCP;
-        var oil = products[1].oil*qt/products[1].forRCP;
-        var cinemon = products[1].cinemon*qt/products[1].forRCP;
-        var improver = products[1].improver*qt/products[1].forRCP;
-        var flavour1 = products[1].flavour1;
-        var flavour2 = products[1].flavour2;
-        var milkPowder = products[1].milkPowder*qt/products[1].forRCP;
-        var salt = products[1].salt*qt/products[1].forRCP;
-        var recepie = `Add ${refiendWheatFlour}grams of Maida, ${sugar} grams of sugar, ${oil}ltr of oil, ${cinemon} of cinemon, ${improver}grams of improver and ${flavour1} and ${flavour2} and ${milkPowder} of Milk Powder, and ${salt}of salt, Mix it well and make doughnuts`;
-        return `refiendWheatFlour: ${refiendWheatFlour},</br> sugar: ${sugar},</br> oil: ${oil},</br> cinemon: ${cinemon},</br> improver: ${improver},</br> flavour2: ${flavour1}, </br> flavour1 ${flavour2},</br>sugar: ${sugar},</br>milkPowder: ${milkPowder}`;
+        return `Select Something, Bitch`;
     }else{
-        console.log("Cant make recepie now");
+       
+        var refiendWheatFlour = Math.floor(products[index].refiendWheatFlour*qt/products[index].forRCP);
+        var sugar = Math.floor(products[index].sugar*qt/products[index].forRCP);
+        var oil = Math.floor(products[index].oil*qt/products[index].forRCP);
+        var cinemon = Math.floor(products[index].cinemon*qt/products[index].forRCP);
+        var improver = Math.floor(products[index].improver*qt/products[index].forRCP);
+        var flavour1 = products[index].flavour1;
+        var flavour2 = products[index].flavour2;
+        var milkPowder = Math.floor(products[index].milkPowder*qt/products[index].forRCP);
+        var salt = Math.floor(products[index].salt*qt/products[index].forRCP);
+        var recp = {
+            refiendWheatFlour : refiendWheatFlour,
+            sugar : sugar,
+            oil: oil,
+            cinemon: cinemon,
+            improver: improver,
+            flavour1: flavour1,
+            flavour2: flavour2,
+            milkPowder: milkPowder,
+            salt: salt,
+        }
+        // console.log(recp);
+        return converter(recp);
+        // return `refiendWheatFlour: ${refiendWheatFlour},</br> sugar: ${sugar},</br> oil: ${oil},</br> cinemon: ${cinemon},</br> improver: ${improver},</br> flavour2: ${flavour1}, </br> flavour1 ${flavour2},</br>sugar: ${sugar},</br>milkPowder: ${milkPowder} </br>SALT: ${salt}`;
+        
     }
+}
+function converter(val){
+    var kgrecp = [];
+    var unit
+    Object.values(val).forEach(i=>{
+        if(i >= 1000){
+            i =  i/1000;
+            unit = "kg";
+            kgrecp.push(`${i} kg`);
+            
+        }else{
+            i = i;
+            unit = 'g';
+            kgrecp.push(`${i} gram`);
+           
+        }
+        
+    });
+    return kgrecp;
 }

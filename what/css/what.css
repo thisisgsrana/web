@@ -17,4 +17,24 @@ body #productSelect {
   border: 1px black;
   border-radius: 5px;
 }
+
+body .Recepie {
+  font-family: "monserret";
+  color: #fcfcfc;
+  font-size: 18px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-transform: capitalize;
+}
+
+body .beta td {
+  border: 1px solid;
+  border-color: white;
+  text-transform: capitalize;
+}
+
+body .beta {
+  font-family: "monserret";
+}
 /*# sourceMappingURL=what.css.map */
