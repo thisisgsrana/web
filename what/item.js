@@ -154,7 +154,7 @@ select.addEventListener("change", (event) =>{
         });
         
         
-        p.innerHTML = recepie;
+        
         p.appendChild(table);
         p.appendChild(table2);
         
@@ -208,7 +208,7 @@ function make(index, qt){
 }
 function converter(val){
     var kgrecp = [];
-    var unit
+    
     Object.values(val).forEach(i=>{
         if(i >= 1000){
             i =  i/1000;
