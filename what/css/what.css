@@ -37,4 +37,10 @@ body .beta td {
 body .beta {
   font-family: "monserret";
 }
+
+body .grid-container {
+  display: -ms-grid;
+  display: grid;
+  grid: auto-flow dense / 180px 180px 180px;
+}
 /*# sourceMappingURL=what.css.map */

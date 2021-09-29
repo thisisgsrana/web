@@ -1,3 +1,4 @@
+// add products here if want to add something just add raw mat and qty,
 const products = [
     {
         productName: "---Please Select Someting---",
@@ -60,9 +61,11 @@ const products = [
     },
 ];
 // products.forEach(product => console.log(product));
-console.log(products[1].quantity);
+
 
 // write code to automatically make var form products of array on product name 
+
+// code below makes basic option element for what we want to make
 const optGenerator = function(){
     const select = document.querySelector("#productSelect");
     select.innerHTML = "";
@@ -86,32 +89,75 @@ const optGenerator = function(){
 window.addEventListener("load", optGenerator);
 
 var select = document.querySelector("#productSelect");
-
+// code below provides quantity how much we want to make and return us recepie
 select.addEventListener("change", (event) =>{
     
     const quantity = document.querySelector(".quantity");
-    const p = document.createElement("p");
+    const p = document.createElement("div");
+    var classes = ["grid-container"]
+    p.classList.add(...classes)
     const input = document.createElement("input");
+    
     input.classList.add("fQuantity");
     input.type = "number";
     var getNum = select.selectedIndex;
-    
+
+
+    var myKeys = Object.keys(products[getNum]);
+    myKeys = myKeys.splice(4,);
+
+
     var whatis = products[getNum].quantity;
-        
+    const table = document.createElement("table");
+    var args = ["beta", "container", "center","grid-item"];
+    table.classList.add(...args);
+    const table2 = document.createElement("table");
+    table2.classList.add(...args);
     input.placeholder = `Please enter the numebr in ${whatis}`;
     quantity.innerHTML = "";
     
     input.style.width = "300px";
     quantity.appendChild(input);
 
+    // updates value on change of quantity
+
     input.addEventListener("input", (event)=>{
+        table.innerHTML="";
+        table2.innerHTML="";
         p.innerHTML = ""; 
         var qt = input.value;
         var recepie = make(getNum, qt);
-        console.log(recepie);
-        p.classList.add(`Recepie`);
+        // console.log(recepie);
+        // p.classList.add(`Recepie`);
 
+
+        myKeys.forEach(i=>{
+            var tr = document.createElement("tr");
+            var td = document.createElement("td");
+            td.innerHTML = "";
+            var mark = document.createTextNode(i);
+            
+            td.appendChild(mark);
+            tr.appendChild(td);
+            table.appendChild(tr);
+        });
+
+        recepie.forEach(i=>{
+            var tr = document.createElement("tr");
+            var td = document.createElement("td");
+            td.innerHTML = "";
+            var mark = document.createTextNode(i);
+            
+            td.appendChild(mark);
+            tr.appendChild(td);
+            table2.appendChild(tr);
+        });
+        
+        
         p.innerHTML = recepie;
+        p.appendChild(table);
+        p.appendChild(table2);
+        
         quantity.appendChild(p);
            
     });
@@ -122,28 +168,37 @@ select.addEventListener("change", (event) =>{
 
 function make(index, qt){
     if(index == 0){
-        return `Select Something, Bitch`;
+        return `Select Something, please`;
     }else{
-       
-        var refiendWheatFlour = Math.floor(products[index].refiendWheatFlour*qt/products[index].forRCP);
-        var sugar = Math.floor(products[index].sugar*qt/products[index].forRCP);
-        var oil = Math.floor(products[index].oil*qt/products[index].forRCP);
-        var cinemon = Math.floor(products[index].cinemon*qt/products[index].forRCP);
-        var improver = Math.floor(products[index].improver*qt/products[index].forRCP);
-        var flavour1 = products[index].flavour1;
-        var flavour2 = products[index].flavour2;
-        var milkPowder = Math.floor(products[index].milkPowder*qt/products[index].forRCP);
-        var salt = Math.floor(products[index].salt*qt/products[index].forRCP);
+        // const myrecp = {};
+        // var calc =()=>{
+        // var spot = products[index];
+        // var myVals = Object.values(spot);
+        // // console.log(myVals);
+        // var myKeys = Object.keys(spot);
+        // // console.log(myKeys);
+        //     for (let i= 0; i < myVals.length; i++) {
+        //         myVals = myVals[i];
+        //         myKeys = myKeys[i];
+        //         var myMath = Math.floor(myVals*qt/spot.forRCP);
+        //         console.log(myMath);
+        //         Object.assign(myrecp, {1: 3, s: 3, z: 4}, {i: "fuck you", b: "feeling tired"});
+                
+        //     }
+        // }
+        // console.log(myrecp);
+        // calc();
         var recp = {
-            refiendWheatFlour : refiendWheatFlour,
-            sugar : sugar,
-            oil: oil,
-            cinemon: cinemon,
-            improver: improver,
-            flavour1: flavour1,
-            flavour2: flavour2,
-            milkPowder: milkPowder,
-            salt: salt,
+            refiendWheatFlour : Math.floor(products[index].refiendWheatFlour*qt/products[index].forRCP),
+            sugar : Math.floor(products[index].sugar*qt/products[index].forRCP),
+            oil: Math.floor(products[index].oil*qt/products[index].forRCP),
+            cinemon: Math.floor(products[index].cinemon*qt/products[index].forRCP),
+            improver: Math.floor(products[index].improver*qt/products[index].forRCP),
+            flavour1: products[index].flavour1,
+            flavour2: products[index].flavour2,
+            milkPowder: Math.floor(products[index].milkPowder*qt/products[index].forRCP),
+            salt:Math.floor(products[index].salt*qt/products[index].forRCP),
+            
         }
         // console.log(recp);
         return converter(recp);

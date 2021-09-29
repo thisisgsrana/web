@@ -51,4 +51,13 @@ body{
     .beta{
         font-family: "monserret";
     }
+
+    .grid-container{
+        display: grid;
+        grid: auto-flow dense / 180px 180px 180px;
+    }
+    .grid-item{
+        // display: grid;
+        // grid: auto-flow dense / 40px 40px;
+    }
 }

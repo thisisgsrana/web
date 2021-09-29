@@ -1,5 +1,5 @@
 body {
-  background-color: #212121;
+  background-color: #333333;
   color: #fff;
   height: 100%;
 }
@@ -10,7 +10,7 @@ body .devider {
 }
 
 body .right-con {
-  background-color: #212121;
+  background-color: #333333;
   height: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -154,8 +154,14 @@ body .container-1 {
   gap: 10px;
 }
 
-body .container-1 .article {
-  margin-bottom: 0%;
-  background-color: #6d6d6d;
+body .section {
+  margin-top: 100px;
+}
+
+body .what {
+  text-decoration: none;
+  background-color: #0A3D62;
+  color: #fff;
+  font-family: "Zen Tokyo Zoo";
 }
 /*# sourceMappingURL=style.css.map */
