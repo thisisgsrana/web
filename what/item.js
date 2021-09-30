@@ -44,11 +44,12 @@ const products = [
         refiendWheatFlour: 10000,
         sugar: 1000,
         oil: 700,
-        cinemon: 3,
+        cinemon: 0,
         improver: 30,
         flavour1: "",
         flavour2: "",
         milkPowder: 0,
+        salt: 150,
     },
     {
         productName: "Cheese Burger",
@@ -129,29 +130,46 @@ select.addEventListener("change", (event) =>{
         var recepie = make(getNum, qt);
         // console.log(recepie);
         // p.classList.add(`Recepie`);
+        
 
-
-        myKeys.forEach(i=>{
+        for (const key in recepie) {
             var tr = document.createElement("tr");
             var td = document.createElement("td");
+            var td2 = document.createElement("td");
+
             td.innerHTML = "";
-            var mark = document.createTextNode(i);
+            td2.innerHTML = "";
+            var mark = document.createTextNode(key);
+            var qty = document.createTextNode(recepie[key]);
             
+            td2.appendChild(qty);
             td.appendChild(mark);
             tr.appendChild(td);
+            tr.appendChild(td2)
             table.appendChild(tr);
-        });
+        }
 
-        recepie.forEach(i=>{
-            var tr = document.createElement("tr");
-            var td = document.createElement("td");
-            td.innerHTML = "";
-            var mark = document.createTextNode(i);
+        // myKeys.forEach(i=>{
+        //     var tr = document.createElement("tr");
+        //     var td = document.createElement("td");
+        //     td.innerHTML = "";
+        //     var mark = document.createTextNode(i);
             
-            td.appendChild(mark);
-            tr.appendChild(td);
-            table2.appendChild(tr);
-        });
+        //     td.appendChild(mark);
+        //     tr.appendChild(td);
+        //     table.appendChild(tr);
+        // });
+
+        // recepie.forEach(i=>{
+        //     var tr = document.createElement("tr");
+        //     var td = document.createElement("td");
+        //     td.innerHTML = "";
+        //     var mark = document.createTextNode(i);
+            
+        //     td.appendChild(mark);
+        //     tr.appendChild(td);
+        //     table2.appendChild(tr);
+        // });
         
         
         
@@ -170,42 +188,35 @@ function make(index, qt){
     if(index == 0){
         return `Select Something, please`;
     }else{
-        // const myrecp = {};
-        // var calc =()=>{
-        // var spot = products[index];
-        // var myVals = Object.values(spot);
-        // // console.log(myVals);
-        // var myKeys = Object.keys(spot);
-        // // console.log(myKeys);
-        //     for (let i= 0; i < myVals.length; i++) {
-        //         myVals = myVals[i];
-        //         myKeys = myKeys[i];
-        //         var myMath = Math.floor(myVals*qt/spot.forRCP);
-        //         console.log(myMath);
-        //         Object.assign(myrecp, {1: 3, s: 3, z: 4}, {i: "fuck you", b: "feeling tired"});
-                
-        //     }
-        // }
-        // console.log(myrecp);
-        // calc();
-        var recp = {
-            refiendWheatFlour : Math.floor(products[index].refiendWheatFlour*qt/products[index].forRCP),
-            sugar : Math.floor(products[index].sugar*qt/products[index].forRCP),
-            oil: Math.floor(products[index].oil*qt/products[index].forRCP),
-            cinemon: Math.floor(products[index].cinemon*qt/products[index].forRCP),
-            improver: Math.floor(products[index].improver*qt/products[index].forRCP),
-            flavour1: products[index].flavour1,
-            flavour2: products[index].flavour2,
-            milkPowder: Math.floor(products[index].milkPowder*qt/products[index].forRCP),
-            salt:Math.floor(products[index].salt*qt/products[index].forRCP),
-            
+        var calc = ()=>{
+            var myobj = {};
+            var myObjKeys = Object.keys(products[index]).splice(4,);
+            var myObjVals = Object.values(products[index]).splice(4,);
+            var newMyVals = [];
+            myObjVals.forEach((i)=>{
+                i = Math.round(i*qt/products[index].forRCP);
+                newMyVals.push(i);
+            });
+            // console.log(newMyVals);
+            myObjKeys.forEach((key, i) => myobj[key] = newMyVals[i]);
+            return myobj;
         }
+       
+       
         // console.log(recp);
-        return converter(recp);
+        const recpObj ={};
+        const values = converter(calc());
+        var keys = Object.keys(products[index]);
+        keys = keys.splice(4,);
+        keys.forEach((key, i) => recpObj[key] = values[i]);
+        return recpObj;
+        // console.log(recpObj);
+        // console.log(keys, values);
         // return `refiendWheatFlour: ${refiendWheatFlour},</br> sugar: ${sugar},</br> oil: ${oil},</br> cinemon: ${cinemon},</br> improver: ${improver},</br> flavour2: ${flavour1}, </br> flavour1 ${flavour2},</br>sugar: ${sugar},</br>milkPowder: ${milkPowder} </br>SALT: ${salt}`;
         
     }
 }
+
 function converter(val){
     var kgrecp = [];
     

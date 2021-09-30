@@ -47,17 +47,17 @@ body{
     border: 1px solid;
     border-color: white;
     text-transform: capitalize;
+    height: 20px !important;
     }
-    .beta{
+    .beta tr{
         font-family: "monserret";
+        height: 20px;
     }
 
     .grid-container{
         display: grid;
         grid: auto-flow dense / 180px 180px 180px;
+        grid-auto-rows: 30px;
     }
-    .grid-item{
-        // display: grid;
-        // grid: auto-flow dense / 40px 40px;
-    }
+    
 }
