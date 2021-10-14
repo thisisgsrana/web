@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../reactjs/two-website"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "thisisgsrana"
+	}
+}

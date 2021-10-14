@@ -26,34 +26,6 @@ body{
     background-color: color(body);
     color: color(accent);
     height: 100%;
-    .logo-1{
-        margin-top: 2vw;
-        padding: 10px;
-        display: flex;
-        flex-flow: row;
-        flex: 100px; 
-        align-items: center;
-        justify-content: space-around;
-        
-    }
-    .logo-10{
-        margin-top: 2vw;
-        padding: 10px;
-        display: flex;
-        flex-flow: column;
-        flex: 100px; 
-        align-items: center;
-        justify-content: space-around;
-        
-    }
-    .flex-item:nth-of-type(2){
-        float: left;
-        align-self: center;
-        flex:4 ;
-    }
-    
-
-
     .devider{
         max-height: 100vh;
         min-width: 100vw;
@@ -70,12 +42,6 @@ body{
     .hero{
         font-family:fonts(main);
         color: #fff;
-    }
-    .img{
-        height: 100vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top;
     }
     .zero1{
         margin-top: 100px;

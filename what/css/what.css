@@ -39,11 +39,4 @@ body .beta tr {
   font-family: "monserret";
   height: 20px;
 }
-
-body .grid-container {
-  display: -ms-grid;
-  display: grid;
-  grid: auto-flow dense / 180px 180px 180px;
-  grid-auto-rows: 30px;
-}
 /*# sourceMappingURL=what.css.map */
