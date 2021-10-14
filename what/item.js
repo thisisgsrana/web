@@ -215,7 +215,7 @@ function converter(val){
     Object.values(val).forEach(i=>{
         if(i >= 1000){
             if(!isString(i)){
-                i =  1000/i;
+                i =  i/1000;
                 
                 kgrecp.push(`${i} kg`);
             }else{
