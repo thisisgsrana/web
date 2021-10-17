@@ -24,7 +24,7 @@ const products = [
         productName: "Fan",
         price: 50,
         quantity: "Dozens",
-        forRCP:45,
+        forRCP:50,
         refiendWheatFlour: 11000,
         maun: 1000,
         salt: 275,
