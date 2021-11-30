@@ -1,0 +1,168 @@
+body {
+  background-color: #333333;
+  color: #fff;
+  height: 100%;
+}
+
+body .devider {
+  max-height: 100vh;
+  min-width: 100vw;
+}
+
+body .right-con {
+  background-color: #333333;
+  width: 100%;
+  height: 1vh;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .hero {
+  font-family: "Zen Tokyo Zoo";
+  color: #fff;
+}
+
+body .zero1 {
+  margin-top: 100px;
+  font-family: "Lora";
+  font-size: 80px;
+}
+
+body .zero {
+  font-family: "Cutive Mono";
+  color: #09ca09;
+  font-size: 40px;
+  margin-top: -30px;
+  font-stretch: expanded;
+}
+
+body .intro {
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Montserrat';
+  padding: 20px;
+  border-style: solid;
+  border-color: #dbdbdb;
+  border-width: 2px;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+body .b-clutter {
+  margin-top: 40px;
+}
+
+body .btn {
+  background-color: black;
+  margin: 20px;
+  color: #ebfffc;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #474747;
+  font-family: "Lora";
+}
+
+body .btn-act:hover {
+  color: #f8fbff;
+  background-color: #474747;
+}
+
+body .links {
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+}
+
+body .right-con-sm {
+  max-height: 30%;
+}
+
+body .hero-sm {
+  margin-top: 100px;
+  font-family: "Zen Tokyo Zoo";
+  color: #fff;
+}
+
+body .zero1-sm {
+  margin-top: 50px;
+  font-family: "Lora";
+  font-size: 80px;
+}
+
+body .zero-sm {
+  font-family: "Cutive Mono";
+  color: #09ca09;
+  font-size: 40px;
+  margin-top: -30px;
+  font-stretch: expanded;
+}
+
+body .b-clutter-a {
+  position: relative;
+  float: bottom;
+  margin: 100px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body .right-con {
+  max-height: 100vh;
+  max-width: 100vh;
+}
+
+body .lg-img {
+  max-height: 100vh;
+  min-height: 100vh;
+  min-width: 30vw;
+  max-width: 80vw;
+}
+
+body .section .video {
+  font-family: 'Lora';
+}
+
+body .section .main-vid {
+  margin: 10px;
+  padding: 30px;
+}
+
+body .section .vid-tittle {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+body .container-1 {
+  margin: 30px;
+  height: 200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(15px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  gap: 10px;
+}
+
+body .section {
+  margin-top: 100px;
+}
+
+body .what {
+  text-decoration: none;
+  background-color: #0A3D62;
+  color: #fff;
+  font-family: "Zen Tokyo Zoo";
+}
+/*# sourceMappingURL=style.css.map */
