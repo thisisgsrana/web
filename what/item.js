@@ -8,7 +8,7 @@ const products = [
         productName: "Doughnut",
         price: 30,
         quantity: "Pieces",
-        forRCP:300,
+        forRCP:280,
         refiendWheatFlour: 10000,
         sugar: 2000,
         oil: 1000,
