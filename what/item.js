@@ -8,7 +8,7 @@ const products = [
         productName: "Doughnut",
         price: 30,
         quantity: "Pieces",
-        forRCP:280,
+        forRCP:250,
         refiendWheatFlour: 10000,
         sugar: 2000,
         oil: 1000,
@@ -21,13 +21,13 @@ const products = [
         
     },
     {
-        productName: "Fan",
+        productName: "Crass",
         price: 50,
-        quantity: "Dozens",
-        forRCP:50,
-        refiendWheatFlour: 11000,
-        maun: 1000,
-        salt: 275,
+        quantity: "Slabs",
+        forRCP:10,
+        refiendWheatFlour: 22000,
+        maun: 2000,
+        salt: 580,
         gheeSlab: "850",
        },
     {
