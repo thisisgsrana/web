@@ -222,4 +222,21 @@ body .what {
   color: #fff;
   font-family: "Zen Tokyo Zoo";
 }
+
+body .Question {
+  border: 1rem white;
+  border-radius: 20px;
+  font-family: "Lora";
+}
+
+body .q {
+  color: paleturquoise;
+  font-size: 20px;
+  padding: 30px;
+}
+
+body .a {
+  color: white;
+  font-size: 20px;
+}
 /*# sourceMappingURL=style.css.map */

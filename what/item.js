@@ -40,17 +40,7 @@ const products = [
         oil: 700,
         improver: 30,
         salt: 150,
-    },
-    {
-        productName: "Bread",
-        price: 30,
-        quantity: "Pieces",
-        forRCP: 50,
-        tikki: 1,
-        pyaj: 1,
-        mayonnaise: 10,
-        sauce: 2,
-    },
+    }
 ];
 
 const cost = {

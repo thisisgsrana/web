@@ -203,6 +203,21 @@ body{
             color: color(accent);
             font-family: fonts(main);
         }
+        .Question{
+            border: 1rem white;
+            border-radius: 20px;
+            font-family: fonts(secondary);
+            
+        }
+        .q{
+            color: paleturquoise;
+            font-size: 20px;
+            padding: 30px;
+        }
+        .a{
+            color: white;
+            font-size: 20px;
+        }
             
             
           
