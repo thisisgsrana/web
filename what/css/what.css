@@ -1,5 +1,6 @@
 body {
   background-color: #1f1f1f;
+  font-family: 'Montserrat', sans-serif;
   color: #f3eefc;
 }
 
@@ -36,7 +37,15 @@ body .beta td {
 }
 
 body .beta tr {
-  font-family: "monserret";
+  font-family: 'Montserrat', sans-serif;
   height: 20px;
+}
+
+body .grid-container {
+  margin: 100px;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  display: -ms-grid;
+  display: grid;
 }
 /*# sourceMappingURL=what.css.map */

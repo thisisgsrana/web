@@ -1,7 +1,7 @@
 // add products here if want to add something just add raw mat and qty,
 const products = [
     {
-        productName: "---Please Select Someting---",
+        productName: "Select Item",
         
     },
     {
@@ -60,8 +60,8 @@ const products = [
     {
         productName: " Namkeen Biscuit",
         price: 250,
-        quantity: "kg",
-        forRCP: "batch",
+        quantity: "batch",
+        forRCP: 1,
         refiendWheatFlour: 4000,
         sugar: 1000,
         oil: 100,
@@ -92,25 +92,7 @@ const products = [
     }
 ];
 
-const cost = {
-    refiendWheatFlour: 26,
-    sugar: 2000,
-    oil: 143,
-    cinemon: 1500,
-    improver: 230,
-    flavour1: "Vanilla",
-    flavour2: "Butter",
-    milkPowder: 400,
-    salt: 15,
-    gheeSlab: 154,
-
-}
-// products.forEach(product => console.log(product));
-
-
-// write code to automatically make var form products of array on product name 
-
-// code below makes basic option element for what we want to make
+// Takes food name from array of objects and push to the options
 const optGenerator = function(){
     const select = document.querySelector("#productSelect");
     select.innerHTML = "";
@@ -128,9 +110,7 @@ const optGenerator = function(){
     
 };
 
-
-
-
+// code to be executed at window load
 window.addEventListener("load", optGenerator);
 
 var select = document.querySelector("#productSelect");
@@ -139,7 +119,7 @@ select.addEventListener("change", (event) =>{
     
     const quantity = document.querySelector(".quantity");
     const p = document.createElement("div");
-    var classes = ["grid-container"]
+    var classes = ["grid-container", "center"]
     p.classList.add(...classes)
     const input = document.createElement("input");
     
@@ -204,7 +184,8 @@ select.addEventListener("change", (event) =>{
 
 } );
 
-
+// original js starts here
+// fun makes calculte the quantity according to the input
 function make(index, qt){
     if(index == 0){
         return `Select Something, please`;
@@ -213,6 +194,7 @@ function make(index, qt){
             var myobj = {};
             var myObjKeys = Object.keys(products[index]).splice(4,);
             var myObjVals = Object.values(products[index]).splice(4,);
+            // new val is array of calculated numbers
             var newMyVals = [];
             myObjVals.forEach((i)=>{
                 if(!isString(i)){
@@ -227,6 +209,7 @@ function make(index, qt){
                 
             });
             // console.log(newMyVals);
+
             myObjKeys.forEach((key, i) => myobj[key] = newMyVals[i]);
             return myobj;
         }
@@ -245,9 +228,13 @@ function make(index, qt){
         
     }
 }
+
+// function bellow looks if the value in the product object is string or array. Because values that does not need to be calculated are written in srings. Like ghee slabs. 
 function isString(value) {
 	return typeof value === 'string' || value instanceof String;
 }
+
+// the converter function converts value in grams to kg
 function converter(val){
     var kgrecp = [];
     
@@ -280,4 +267,4 @@ function converter(val){
 }
 
 
-// price calclulator here
+

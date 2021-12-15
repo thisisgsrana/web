@@ -20,6 +20,7 @@ $fonts:(
 
 body{
     background-color: color(backgroun);
+    font-family: 'Montserrat', sans-serif;
     color: color(text);
     .container{
         align-content: center;
@@ -50,14 +51,18 @@ body{
     height: 20px !important;
     }
     .beta tr{
-        font-family: "monserret";
+        font-family: 'Montserrat', sans-serif;
         height: 20px;
     }
 
-    // .grid-container{
-    //     display: grid;
-    //     grid: auto-flow dense / 180px 180px 180px;
-    //     grid-auto-rows: 30px;
-    // }
+    .grid-container{
+        margin: 100px;
+        padding: 10px;
+        font-family: 'Montserrat', sans-serif;
+        display: grid;
+        
+        
+        
+    }
     
 }
