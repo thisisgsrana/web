@@ -7,7 +7,7 @@ const products = [
     {
         productName: "Doughnut",
         price: 30,
-        quantity: "Batch : 10",
+        quantity: " 1 Batch of 10kg",
         forRCP:1,
         refiendWheatFlour: 10000,
         sugar: 2000,
@@ -23,7 +23,7 @@ const products = [
     {
         productName: "Crass",
         price: 50,
-        quantity: "Slabs",
+        quantity: "Slabs of 3.5 kg",
         forRCP:10,
         refiendWheatFlour: 22000,
         maun: 2000,
@@ -33,7 +33,7 @@ const products = [
     {
         productName: "Bun",
         price: 50,
-        quantity: "Batch : 22 kg",
+        quantity: "Batch of 11 kg",
         forRCP:1,
         refiendWheatFlour: 10000,
         sugar: 1000,
@@ -44,21 +44,22 @@ const products = [
     {
         productName: "Biscuit Base Basic",
         price: 200,
-        quantity: "Batch",
+        quantity: "Batch of 4 kg",
         forRCP: 1,
         refiendWheatFlour: 4000,
         sugar: 2000,
         oil: 100,
-        margrain: 2000,
+        ghee: 2000,
         salt: 20,
         milkPowder: 200,
         custardPowder: 100,
         bakingPowder: 30,
         water: 250,
-        flavours: "add flavours accorig to your requirement 20-30 ml"
+        coconutFlavour: 20,
+        butterFlacour: 20,
     },
     {
-        productName: " Namkeen Biscuit",
+        productName: "Namkeen Biscuit",
         price: 250,
         quantity: "batch",
         forRCP: 1,
@@ -72,10 +73,11 @@ const products = [
         bakingPowder: 30,
         amonia: 30,
         curd: 150,
-        flavours: "add flavours accorig to your requirement 20-30 ml"
+        vanillaFlavour: 20,
+        butterFlavour: 20,
     },
     {
-        productName: " Namkeen Biscuit",
+        productName: "Coconut Biscuit",
         price: 250,
         quantity: "kg",
         forRCP: 1,
@@ -88,7 +90,7 @@ const products = [
         bakingPowder: 30,
         amonia: 30,
         curd: 300,
-        flavours: "add flavours accorig to your requirement 20-30 ml"
+        coconutFlavour: 25,
     }
 ];
 
@@ -98,6 +100,7 @@ const optGenerator = function(){
     select.innerHTML = "";
     products.forEach(product => {
         const option = document.createElement("option");
+        option.classList.add("optShow");
         option.value = `${product.productName}`;
 
         const whatProduct = document.createTextNode(product.productName);

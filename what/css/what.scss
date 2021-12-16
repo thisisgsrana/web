@@ -1,7 +1,8 @@
 $color:(
-    backgroun: rgb(31, 31, 31),
-    text: rgb(243, 238, 252),
-    button: rgb(244, 224, 6),
+    backgroun: rgb(53, 53, 53),
+    text: rgb(255, 255, 255),
+    button: rgb(211, 255, 92),
+    textD: rgb(71, 85, 33),
 );
 
 @function color($colorName){
@@ -28,12 +29,13 @@ body{
         margin-left: 4vh;
         margin-right: 4vh;
     }
-    #productSelect{
+    .productSelect{
         margin: 10px;
+        color: color(textD);
         background-color: color(button);
-        border: 1px black;
-        border-radius: 5px;
-
+        border-style: 2px rgb(255, 255, 255);
+        border-radius: 15px;
+        font-size: 15px;
     }
     .Recepie{
         font-family: "monserret";
@@ -46,7 +48,7 @@ body{
     
     .beta td{
     border: 1px solid;
-    border-color: white;
+    border-color: color(button);
     text-transform: capitalize;
     height: 20px !important;
     }
@@ -56,13 +58,39 @@ body{
     }
 
     .grid-container{
-        margin: 100px;
+        margin-top: 100px;
         padding: 10px;
         font-family: 'Montserrat', sans-serif;
         display: grid;
+    }
+    .fQuantity{
+        border-radius: 30px;
+        height: 25px;
+        border: 1px color(button);
+       
+    }
+    footer{
+        margin: auto;
+        height: 2em;
+        position: fixed;
+        left: 1;
+        bottom: 0;
+        width: 100%;
+        background-color: color(button);
+        color: white;
+        text-align: center;
         
+
+  .fNav{
+    padding: 6.25px;
+    
+    .homeL{
         
-        
+    text-decoration: none;
+    margin: 10px;
+    color: color(textD);
+     }
+  }
     }
     
 }
