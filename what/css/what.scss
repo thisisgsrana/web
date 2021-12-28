@@ -48,6 +48,7 @@ body{
     
     .beta td{
     border: 1px solid;
+    border-radius: 15px;
     border-color: color(button);
     text-transform: capitalize;
     height: 20px !important;
@@ -64,7 +65,7 @@ body{
         display: grid;
     }
     .fQuantity{
-        border-radius: 30px;
+        border-radius: 10px;
         height: 25px;
         border: 1px color(button);
        
@@ -73,9 +74,9 @@ body{
         margin: auto;
         height: 2em;
         position: fixed;
-        left: 1;
-        bottom: 0;
-        width: 100%;
+        left: 0;
+        bottom: 5px;
+        width: 100vw;
         background-color: color(button);
         color: white;
         text-align: center;

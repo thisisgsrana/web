@@ -240,4 +240,40 @@ body .a {
   font-size: 20px;
   padding-right: 10px;
 }
+
+footer {
+  margin: auto;
+  height: 2em;
+  position: fixed;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+footer .fNav {
+  padding: 6.25px;
+  background-color: #cff300;
+}
+
+footer .fNav .homeL {
+  font-family: "Montserrat";
+  text-decoration: none;
+  margin: 10px;
+  color: white;
+  padding: 10px;
+}
+
+footer .fNav button {
+  height: 2rem;
+  margin: 0px;
+  background-color: #00a72a;
+  border: none;
+  border-radius: 10px;
+}
+
+footer .fNav button:hover {
+  background-color: rgba(3, 3, 0, 0.87);
+}
 /*# sourceMappingURL=style.css.map */

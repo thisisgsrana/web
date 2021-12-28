@@ -79,7 +79,7 @@ const products = [
     {
         productName: "Coconut Biscuit",
         price: 250,
-        quantity: "kg",
+        quantity: "Batch",
         forRCP: 1,
         refiendWheatFlour: 3000,
         sugar: 2000,
@@ -91,7 +91,25 @@ const products = [
         amonia: 30,
         curd: 300,
         coconutFlavour: 25,
+    },{
+        productName: "RedVelvet",
+        price: 500,
+        quantity: "Batch",
+        forRCP: 1,
+        refiendWheatFlour: 310,
+        coco: 16,
+        bakingSodaTBSP: 1,
+        saltTSP: 1,
+        butter: 115,
+        sugar: 300,
+        eggsWHOLE: 2,
+        oilML: 200,
+        VinegarTSP: 1,
+        butterMilk: 240,
+        vanillaFlavourTSP: 2,
+        HOWTO: "Please mix first four items Flour, Coco, baking soda, and salt in one place. and in different bowl mix Sugar and Butter until it becomes soft and smooth. Now add eggs one by one. After pouring all eggs. Add all the oil and whip it well. Now add vinager and buttermilk and flacour.  Now add the dy ingredient in the cake and mix it well. Add colour and now start putting in pan. Bake for 35 minues on 170-80˚C"
     }
+    
 ];
 
 // Takes food name from array of objects and push to the options
