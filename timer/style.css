@@ -123,6 +123,23 @@ body{
     grid-template-rows: repeat(8, minmax(0, 1fr));
     gap: 20px;
 }
+footer{
+    position:sticky;
+    bottom: -10;
+    background-color: rgb(255, 229, 188);
+    display: flex;
+  justify-content: center;
+}
+.base-div{
+    display: inline-flex;
+    align-self: center;
+    text-align: center;
+}
+.base-text{
+    font-family: poppins;
+    color: rgb(0, 66, 123);
+    text-decoration: none;
+}
 
 
 /* .days > p:nth-child(1){
