@@ -1,0 +1,139 @@
+@media(min-width: 720px){
+    .background{
+        height: 200px;
+        grid-row: 2/4;
+        grid-column: 2/4;
+        
+    }
+    .background-2{
+        height: 200px;
+        grid-row: 5/8;
+        grid-column: 8/12;
+        z-index: 1;
+        
+    }
+
+    .days{
+    grid-row: 3/7;
+    grid-column: 4/12;
+    display: flex;
+}
+    .days > p:nth-child(1){
+    
+    font-size: 20vw;
+    font-family: poppins;
+    font-weight: 500;
+    line-height: 90%;
+    z-index: 2;
+    
+}
+    .days > p:nth-child(2){
+    font-size: 2em;
+    font-family: poppins;
+    font-weight: 300;
+    line-height: 90%;
+    align-self: center;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    border-top: 2px solid rgb(255, 215, 72);
+    }
+    .day-time{
+    border-left: 2px solid #ffd748;
+    padding: 20px;
+    font-size: 50px;
+    font-family: poppins;
+    font-weight: 300;
+    line-height: 100%;
+    grid-row: 6/8;
+    grid-column: 4/10;
+}
+}
+@media(max-width: 720px){
+    .background{
+        height: 200px;
+        grid-row: 2/6;
+        grid-column: 1/8;
+        
+    }
+    .background-2{
+        height: 200px;
+        grid-row: 6/8;
+        grid-column: 7/12;  
+        /* z-index: 2; */
+        /* background-image: url("./bottom.png"); */
+        
+    }
+    .days{
+    grid-row: 3/6;
+    grid-column: 4/12;
+    
+    /* display: flex; */
+}
+    .days > p:nth-child(1){
+    
+    font-size: 30vw;
+    font-family: poppins;
+    font-weight: 500;
+    line-height: 90%;
+    z-index: 1;
+    
+}
+    .days > p:nth-child(2){
+    font-size: 2em;
+    font-family: poppins;
+    font-weight: 300;
+    line-height: 90%;
+    border-left: 2px solid rgb(255, 215, 72);
+    padding-left: 20px;
+    z-index: 2;
+    
+    }
+    .day-time{
+    border-top: 2px solid rgb(255, 215, 72);
+    padding-top: 20px;
+    font-size: 50px;
+    font-family: poppins;
+    font-weight: 300;
+    line-height: 100%;
+    grid-row: 6/12;
+    grid-column: 4/8;
+}
+}
+*{
+    margin: 0px;
+    width: 100%;
+}
+
+body{
+    background-color: black;
+}
+.main{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100vw; 
+    color: white; 
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(8, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+/* .days > p:nth-child(1){
+    
+    font-size: 30vw;
+    font-family: poppins;
+    font-weight: 500;
+    line-height: 90%;
+    
+} */
+/* .days > p:nth-child(2){
+    font-size: 2em;
+    font-family: poppins;
+    font-weight: 300;
+    line-height: 90%;
+    align-self: flex-end;
+    padding-bottom: 50px ;
+} */
+
+

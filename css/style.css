@@ -60,20 +60,14 @@ body .devider {
 }
 
 body .right-con {
+  height: 100vh;
+  width: 100vw;
+  background: url(../Images/gs.jpg);
   background-color: #333333;
-  width: 100%;
-  height: 1vh;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 body .hero {
@@ -82,10 +76,12 @@ body .hero {
 }
 
 body .img {
+  width: 50vw;
   height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  size: cover;
+  -o-object-position: center;
+     object-position: center;
+  background-attachment: fixed;
 }
 
 body .zero1 {
