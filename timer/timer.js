@@ -1,4 +1,5 @@
-// var date = new Date().toDateString(); 
+// this file logs date and time 
+
 
 const dates = new Date();
 const [month, day, year]= [dates.getMonth(), dates.getDate(), dates.getFullYear()];
@@ -6,7 +7,6 @@ var monthString = dates.toLocaleString('default', {month: 'long'});
 console.log(monthString);
 var cdate = document.querySelector("#currunt-DDMM");
 cdate.innerHTML = `${day} ${monthString}`; 
-
 var yeard = document.querySelector("#currrunt_yyyy");
 yeard.innerHTML = `${year}`;
 
@@ -33,11 +33,16 @@ yeard.innerHTML = `${year}`;
 const date1 = new Date('9/13/2022');
 // added +1 in month bcz it shows one less 
 const date2 = new Date(`${month+1}/${day}/${year}`);
-const diffTime = Math.abs(date2 - date1);
-const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+const diffTime = Math.abs(date2 - date1); //elapsed time in milliseconds
+const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); // changing milliseconds to days
 var timepassed = document.querySelector("#days-passed");
 timepassed.innerHTML = diffDays; 
 
+
+// counting remaining days for approx 2 years ending in sep 2024
+const remaining = 730 - diffDays;
+var remainingDays = document.querySelector("#remaining");
+remainingDays.innerHTML = `${remaining} days left`;
 
 
 
